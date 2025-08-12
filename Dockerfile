@@ -11,8 +11,6 @@ RUN useradd -m builder -s /bin/bash && \
     usermod -aG sudo builder && \
     echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-USER builder
-
 WORKDIR /home/builder
 
 CMD ["/bin/bash"]
