@@ -45,7 +45,7 @@ jobs:
           chown -R builder:builder .
       - name: Build firmware as non-root user
         run: |
-          runuser -u builder -- make -j$(nproc) V=s
+          runuser -u builder -- make -j$(nproc)
       - name: Upload firmware artifact
         uses: actions/upload-artifact@v4
         with:
