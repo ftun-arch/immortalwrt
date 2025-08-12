@@ -26,14 +26,14 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          tags: ghcr.io/ftun-aarch/immortalwrt:build-env
+          tags: ghcr.io/ftun-arch/immortalwrt:build-env
           push: true
 
   build-firmware:
     needs: build-docker-image
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ftun-aarch/immortalwrt:build-env
+      image: ghcr.io/ftun-arch/immortalwrt:build-env
 
     steps:
       - name: Checkout repository
